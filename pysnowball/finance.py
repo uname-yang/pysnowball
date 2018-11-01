@@ -4,8 +4,8 @@ from pysnowball import cons
 from pysnowball import api_ref
 from pysnowball import utls
 
-import pandas as pd
-import time
+# import pandas as pd
+# import time
 
 
 def cash_flow(symbol, is_annals=1, count=5):
@@ -18,3 +18,52 @@ def cash_flow(symbol, is_annals=1, count=5):
     url = url + '&count='+str(count)
 
     return utls.fetch(url)
+
+
+def indicator(symbol, is_annals=1, count=5):
+    
+    url = api_ref.finance_indicator_url+symbol
+    
+    if is_annals == 1:
+        url = url + '&type=Q4'
+    
+    url = url + '&count='+str(count)
+
+    return utls.fetch(url)
+
+
+def balance(symbol, is_annals=1, count=5):
+
+    url = api_ref.finance_balance_url+symbol
+
+    if is_annals == 1:
+        url = url + '&type=Q4'
+
+    url = url + '&count='+str(count)
+
+    return utls.fetch(url)
+
+
+def income(symbol, is_annals=1, count=5):
+    
+    url = api_ref.finance_income_url+symbol
+
+    if is_annals == 1:
+        url = url + '&type=Q4'
+
+    url = url + '&count='+str(count)
+
+    return utls.fetch(url)
+
+
+def business(symbol, is_annals=1, count=5):
+
+    url = api_ref.finance_business_url+symbol
+
+    if is_annals == 1:
+        url = url + '&type=Q4'
+
+    url = url + '&count='+str(count)
+
+    return utls.fetch(url)
+ 
