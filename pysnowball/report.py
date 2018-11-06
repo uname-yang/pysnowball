@@ -7,7 +7,7 @@ from pysnowball import utls
 
 def report(symbol, count=10):
     url = api_ref.report_latest_url+symbol
-    url = url + '&count='+str(count)
+    # url = url + '&count='+str(count)
     return utls.fetch(url)
 
 

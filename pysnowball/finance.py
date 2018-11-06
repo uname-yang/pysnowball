@@ -4,8 +4,6 @@ from pysnowball import cons
 from pysnowball import api_ref
 from pysnowball import utls
 
-# import pandas as pd
-# import time
 
 
 def cash_flow(symbol, is_annals=1, count=5):

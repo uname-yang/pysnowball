@@ -25,8 +25,10 @@ def holders(symbol):
     return utls.fetch(url)
 
 
-def bonus(symbol):
+def bonus(symbol,page=1,size=10):
     url = api_ref.f10_bonus+symbol
+    url = url + '&page='+str(page)
+    url = url + '&size='+str(size)
     return utls.fetch(url)
 
 
@@ -54,4 +56,9 @@ def shareschg(symbol, count=5):
 def top_holders(symbol, circula=1):
     url = api_ref.f10_top_holders+symbol
     url = url + '&circula='+str(circula)
+    return utls.fetch(url)
+
+
+def main_indicator(symbol):
+    url = api_ref.f10_indicator+symbol
     return utls.fetch(url)

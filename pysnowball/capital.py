@@ -19,17 +19,17 @@ def blocktrans(symbol, page=1, size=30):
     return utls.fetch(url)
 
 
-def assort(symbol):
+def capital_assort(symbol):
     url = api_ref.capital_assort_url+symbol
     return utls.fetch(url)
 
 
-def flow(symbol):
+def capital_flow(symbol):
     url = api_ref.capital_flow_url+symbol
     return utls.fetch(url)
 
 
-def history(symbol, count=20):
+def capital_history(symbol, count=20):
     url = api_ref.capital_history_url+symbol
     url = url + '&count='+str(count)
     return utls.fetch(url)
