@@ -18,6 +18,17 @@ capital_history_url = "https://stock.xueqiu.com/v5/stock/capital/history.json?sy
 capital_flow_url = "https://stock.xueqiu.com/v5/stock/capital/flow.json?symbol="
 
 # f10
-
+f10_skholderchg = "https://stock.xueqiu.com/v5/stock/f10/cn/skholderchg.json?symbol="
+f10_skholder = "https://stock.xueqiu.com/v5/stock/f10/cn/skholder.json?symbol="
+f10_industry = "https://stock.xueqiu.com/v5/stock/f10/cn/industry.json?symbol="
+f10_holders = "https://stock.xueqiu.com/v5/stock/f10/cn/holders.json?&symbol="
+f10_bonus = "https://stock.xueqiu.com/v5/stock/f10/cn/bonus.json?&symbol="
+f10_org_holding_change = "https://stock.xueqiu.com/v5/stock/f10/cn/org_holding/change.json?symbol="
+f10_industry_compare = "https://stock.xueqiu.com/v5/stock/f10/cn/industry/compare.json?type=single&symbol="
+f10_business_analysis = "https://stock.xueqiu.com/v5/stock/f10/cn/business_analysis.json?symbol="
+f10_shareschg = "https://stock.xueqiu.com/v5/stock/f10/cn/business_analysis.json?symbol="
+f10_top_holders = "https://stock.xueqiu.com/v5/stock/f10/cn/top_holders.json?&symbol="
 
 # real time
+realtime_quote = "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol="
+realtime_pankou = "https://xueqiu.com/stock/pankou.json?symbol="
