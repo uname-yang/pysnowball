@@ -4,7 +4,13 @@
 
 ## 快速指引
 
-调用API前需要手动获取雪球网站的token,使用set_token设置token后才能访问雪球的API。
+安装
+
+```bash
+pip install pysnowball
+```
+
+示例
 
 ```python
 >>> import pysnowball as ball
@@ -12,6 +18,10 @@
 'xq_a_token=651af***************031c96a315c;'
 >>> ball.cash_flow('SH600000')
 ```
+
+调用API前需要手动获取雪球网站的token,使用set_token设置token后才能访问雪球的API。
+
+传送门 === [如何获取雪球token]()
 
 ## APIs
 
