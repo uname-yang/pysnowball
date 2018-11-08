@@ -21,7 +21,7 @@ pip install pysnowball
 
 调用API前需要手动获取雪球网站的token,使用set_token设置token后才能访问雪球的API。
 
-传送门 === [如何获取雪球token]()
+传送门 === [如何获取雪球token](https://blog.crackcreed.com/diy-xue-qiu-app-shu-ju-api/)
 
 ## APIs
 
