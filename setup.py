@@ -68,14 +68,14 @@ long_desc = """
 
 def read_install_requires():
     reqs = [
-        'pandas >= 0.23.4',
+        # 'pandas >= 0.23.4',
         'requests >= 2.18.4'
     ]
     return reqs
 
 setuptools.setup(
     name="pysnowball",
-    version="0.0.3",
+    version="0.0.4",
     author="Yang Yu",
     author_email="yang.lights@hotmail.com",
     description="xueqiu api python client | 集成雪球API",
