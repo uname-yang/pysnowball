@@ -6,7 +6,7 @@ from pysnowball import utls
 
 
 
-def cash_flow(symbol, is_annals=1, count=5):
+def cash_flow(symbol, is_annals=0, count=10):
 
     url = api_ref.finance_cash_flow_url+symbol
     
@@ -18,7 +18,7 @@ def cash_flow(symbol, is_annals=1, count=5):
     return utls.fetch(url)
 
 
-def indicator(symbol, is_annals=1, count=5):
+def indicator(symbol, is_annals=0, count=10):
     
     url = api_ref.finance_indicator_url+symbol
     
@@ -30,7 +30,7 @@ def indicator(symbol, is_annals=1, count=5):
     return utls.fetch(url)
 
 
-def balance(symbol, is_annals=1, count=5):
+def balance(symbol, is_annals=0, count=10):
 
     url = api_ref.finance_balance_url+symbol
 
@@ -42,7 +42,7 @@ def balance(symbol, is_annals=1, count=5):
     return utls.fetch(url)
 
 
-def income(symbol, is_annals=1, count=5):
+def income(symbol, is_annals=0, count=10):
     
     url = api_ref.finance_income_url+symbol
 
@@ -54,7 +54,7 @@ def income(symbol, is_annals=1, count=5):
     return utls.fetch(url)
 
 
-def business(symbol, is_annals=1, count=5):
+def business(symbol, is_annals=0, count=10):
 
     url = api_ref.finance_business_url+symbol
 

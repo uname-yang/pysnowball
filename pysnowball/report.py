@@ -5,9 +5,8 @@ from pysnowball import api_ref
 from pysnowball import utls
 
 
-def report(symbol, count=10):
+def report(symbol):
     url = api_ref.report_latest_url+symbol
-    # url = url + '&count='+str(count)
     return utls.fetch(url)
 
 
