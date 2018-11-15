@@ -21,7 +21,7 @@ def fetch(url):
     # print(response.content)
 
     if response.status_code != 200:
-        raise Exception(cons.NOT200_ERROR_MSG)
+        raise Exception(response.content)
 
     return json.loads(response.content)
 
@@ -42,6 +42,6 @@ def fetch_without_token(url):
     # print(response.content)
 
     if response.status_code != 200:
-        raise Exception(cons.NOT200_ERROR_MSG)
+        raise Exception(response.content)
 
     return json.loads(response.content)
