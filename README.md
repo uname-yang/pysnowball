@@ -25,7 +25,7 @@ pip install pysnowball
 
 ## 联系作者
 
-![img](https://blog.crackcreed.com/content/images/2017/11/qrcode_for_gh_ab3754053ff8_344.jpg)
+![img](https://blog.crackcreed.com/content/images/2021/02/wechat_me-1.jpg)
 
 ## APIs
 
