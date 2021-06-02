@@ -32,4 +32,4 @@ f10_indicator = "https://stock.xueqiu.com/v5/stock/f10/cn/indicator.json?symbol=
 
 # real time
 realtime_quote = "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol="
-realtime_pankou = "https://stock.xueqiu.com/stock/pankou.json?symbol="
+realtime_pankou = "https://stock.xueqiu.com/v5/stock/realtime/pankou.json?symbol="
