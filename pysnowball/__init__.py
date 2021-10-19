@@ -19,3 +19,5 @@ from pysnowball.f10 import(skholderchg, skholder, main_indicator,
                            industry_compare, business_analysis, shareschg, top_holders)
 
 from pysnowball.token import (get_token,set_token)
+
+from pysnowball.user import(watch_list, watch_stock)
