@@ -1301,6 +1301,7 @@ ball.industry_compare('SZ002027')
     "error_description": ""
 }
 ```
+
 ### user 自选列表
 
 ```python
@@ -1465,61 +1466,7 @@ ball.watch_list()
 
 ```python
 import pysnowball as ball
-ball.watch_list()
-```
-
-结果显示：
-
-```json
-{
-    "data": {
-        "pid": -5,
-        "category": 1,
-        "stocks": [
-            {
-                "symbol": "SH600809",
-                "name": "山西汾酒",
-                "type": 11,
-                "remark": "",
-                "exchange": "SH",
-                "created": 1634611075047
-            },
-            {
-                "symbol": "SH515790",
-                "name": "光伏ETF",
-                "type": 13,
-                "remark": "",
-                "exchange": "SH",
-                "created": 1631856440323
-            }
-            {
-                "symbol": "SH600030",
-                "name": "中信证券",
-                "type": 11,
-                "remark": "",
-                "exchange": "SH",
-                "created": 1631601724976
-            },
-            {
-                "symbol": "SH513050",
-                "name": "中概互联网ETF",
-                "type": 13,
-                "remark": "",
-                "exchange": "SH",
-                "created": 1631195427798
-            }
-        ]
-    },
-    "error_code": 0,
-    "error_description": ""
-}
-```
-
-### user 自选列表详情
-
-```python
-import pysnowball as ball
-ball.watch_list()
+ball.watch_stock(-1)
 ```
 
 结果显示：
@@ -1635,7 +1582,7 @@ ball.nav_daily("ZH2567925")
 
 ```python
 import pysnowball as ball
-ball.nav_daily("ZH2567925")
+ball.rebalancing_history("ZH2567925")
 ```
 
 结果显示：
