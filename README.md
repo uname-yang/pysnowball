@@ -1301,3 +1301,216 @@ ball.industry_compare('SZ002027')
     "error_description": ""
 }
 ```
+### user 自选列表
+
+```python
+import pysnowball as ball
+ball.watch_list()
+```
+
+结果显示：
+
+```json
+{
+    "data": {
+        "cubes": [
+            {
+                "id": -120,
+                "name": "全部",
+                "order_id": -50,
+                "category": 3,
+                "include": false,
+                "symbol_count": 9,
+                "type": -1
+            },
+            {
+                "id": -27,
+                "name": "沪深",
+                "order_id": -40,
+                "category": 3,
+                "include": false,
+                "symbol_count": 9,
+                "type": -1
+            },
+            {
+                "id": -26,
+                "name": "港股",
+                "order_id": -30,
+                "category": 3,
+                "include": false,
+                "symbol_count": 0,
+                "type": -1
+            },
+            {
+                "id": -25,
+                "name": "美股",
+                "order_id": -20,
+                "category": 3,
+                "include": false,
+                "symbol_count": 0,
+                "type": -1
+            },
+            {
+                "id": -24,
+                "name": "我的",
+                "order_id": -10,
+                "category": 3,
+                "include": false,
+                "symbol_count": 4,
+                "type": -1
+            },
+            {
+                "id": -23,
+                "name": "基金",
+                "order_id": -7,
+                "category": 3,
+                "include": false,
+                "symbol_count": 0,
+                "type": -1
+            }
+        ],
+        "funds": [
+            {
+                "id": -110,
+                "name": "全部",
+                "order_id": -30,
+                "category": 2,
+                "include": false,
+                "symbol_count": 1,
+                "type": -1
+            },
+            {
+                "id": -17,
+                "name": "基金",
+                "order_id": -20,
+                "category": 2,
+                "include": false,
+                "symbol_count": 1,
+                "type": -1
+            },
+            {
+                "id": -16,
+                "name": "私募",
+                "order_id": -10,
+                "category": 2,
+                "include": false,
+                "symbol_count": 0,
+                "type": -1
+            }
+        ],
+        "stocks": [
+            {
+                "id": -1,
+                "name": "全部",
+                "order_id": 1,
+                "category": 1,
+                "include": false,
+                "symbol_count": 76,
+                "type": -1,
+                "created_at": 1623925441286,
+                "updated_at": 1623925441286
+            },
+            {
+                "id": -5,
+                "name": "沪深",
+                "order_id": 7,
+                "category": 1,
+                "include": false,
+                "symbol_count": 72,
+                "type": -1,
+                "created_at": 1623925441301,
+                "updated_at": 1623925441301
+            },
+            {
+                "id": -7,
+                "name": "港股",
+                "order_id": 8,
+                "category": 1,
+                "include": false,
+                "symbol_count": 3,
+                "type": -1,
+                "created_at": 1623925441303,
+                "updated_at": 1623925441303
+            },
+            {
+                "id": -6,
+                "name": "美股",
+                "order_id": 9,
+                "category": 1,
+                "include": false,
+                "symbol_count": 1,
+                "type": -1,
+                "created_at": 1623925441304,
+                "updated_at": 1623925441304
+            }
+        ],
+        "mutualFunds": [
+            {
+                "id": -160,
+                "name": "全部",
+                "order_id": -90,
+                "category": 6,
+                "include": false,
+                "symbol_count": 0,
+                "type": -1
+            }
+        ]
+    },
+    "error_code": 0,
+    "error_description": ""
+}
+```
+
+### user 自选列表详情
+
+```python
+import pysnowball as ball
+ball.watch_list()
+```
+
+结果显示：
+
+```json
+{
+    "data": {
+        "pid": -5,
+        "category": 1,
+        "stocks": [
+            {
+                "symbol": "SH600809",
+                "name": "山西汾酒",
+                "type": 11,
+                "remark": "",
+                "exchange": "SH",
+                "created": 1634611075047
+            },
+            {
+                "symbol": "SH515790",
+                "name": "光伏ETF",
+                "type": 13,
+                "remark": "",
+                "exchange": "SH",
+                "created": 1631856440323
+            }
+            {
+                "symbol": "SH600030",
+                "name": "中信证券",
+                "type": 11,
+                "remark": "",
+                "exchange": "SH",
+                "created": 1631601724976
+            },
+            {
+                "symbol": "SH513050",
+                "name": "中概互联网ETF",
+                "type": 13,
+                "remark": "",
+                "exchange": "SH",
+                "created": 1631195427798
+            }
+        ]
+    },
+    "error_code": 0,
+    "error_description": ""
+}
+```
