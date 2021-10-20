@@ -5,8 +5,7 @@ import pysnowball.cons as cons
 import pysnowball.token as token
 
 def fetch(url):
-    HEADERS = {'Host': 'stock.xueqiu.com',
-               'Accept': 'application/json',
+    HEADERS = {'Accept': 'application/json',
                'Cookie': token.get_token(),
                'User-Agent': 'Xueqiu iPhone 11.8',
                'Accept-Language': 'zh-Hans-CN;q=1, ja-JP;q=0.9',
@@ -27,8 +26,7 @@ def fetch(url):
 
 
 def fetch_without_token(url):
-    HEADERS = {'Host': 'stock.xueqiu.com',
-               'Accept': 'application/json',
+    HEADERS = {'Accept': 'application/json',
                'User-Agent': 'Xueqiu iPhone 11.8',
                'Accept-Language': 'zh-Hans-CN;q=1, ja-JP;q=0.9',
                'Accept-Encoding': 'br, gzip, deflate',
