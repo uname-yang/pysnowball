@@ -22,4 +22,4 @@ from pysnowball.token import (get_token,set_token)
 
 from pysnowball.user import(watch_list, watch_stock)
 
-from pysnowball.cube import(nav_daily)
+from pysnowball.cube import(nav_daily, rebalancing_history)

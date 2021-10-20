@@ -40,3 +40,4 @@ watch_stock = "https://stock.xueqiu.com/v5/stock/portfolio/stock/list.json?size=
 
 #cube
 nav_daily = "https://xueqiu.com/cubes/nav_daily/all.json?cube_symbol="
+rebalancing_history = "https://xueqiu.com/cubes/rebalancing/history.json?cube_symbol="
