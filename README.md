@@ -25,6 +25,8 @@ pip install pysnowball
 
 ## 联系作者
 
+> 欢迎加入Users微信群，方便讨论使用方面的问题，新需求，以及量化交易相关的内容。 共同进步！
+
 ![img](https://blog.crackcreed.com/content/images/2021/02/wechat_me-1.jpg)
 
 ## APIs
