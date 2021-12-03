@@ -1689,3 +1689,109 @@ ball.rebalancing_history("ZH2567925")
     "maxPage": 1
 }
 ```
+
+
+### quote detail 股票详情信息
+
+```python
+import pysnowball as ball
+ball.quote_detail("SH600104")
+```
+
+结果显示：
+
+```json
+{
+	"data": {
+		"market": {
+			"status_id": 7,
+			"region": "CN",
+			"status": "\u5df2\u6536\u76d8",
+			"time_zone": "Asia/Shanghai",
+			"time_zone_desc": null,
+			"delay_tag": 0
+		},
+		"quote": {
+			"current_ext": null,
+			"symbol": "SH600104",
+			"volume_ext": null,
+			"high52w": 26.4319,
+			"delayed": 0,
+			"type": 11,
+			"tick_size": 0.01,
+			"float_shares": 11683461365,
+			"limit_down": 18.23,
+			"no_profit": null,
+			"high": 20.96,
+			"float_market_capital": 243717004074.0,
+			"timestamp_ext": null,
+			"lot_size": 100,
+			"lock_set": null,
+			"weighted_voting_rights": null,
+			"chg": 0.61,
+			"eps": 2.07,
+			"last_close": 20.25,
+			"profit_four": 24133054122.05,
+			"volume": 65949501,
+			"volume_ratio": 1.73,
+			"profit_forecast": 27133061018.0,
+			"turnover_rate": 0.56,
+			"low52w": 18.03,
+			"name": "\u4e0a\u6c7d\u96c6\u56e2",
+			"exchange": "SH",
+			"pe_forecast": 8.982,
+			"total_shares": 11683461365,
+			"status": 1,
+			"is_vie_desc": null,
+			"security_status": null,
+			"code": "600104",
+			"goodwill_in_net_assets": 0.5219986746082667,
+			"avg_price": 20.698,
+			"percent": 3.01,
+			"weighted_voting_rights_desc": null,
+			"amplitude": 3.51,
+			"current": 20.86,
+			"is_vie": null,
+			"current_year_percent": -11.78,
+			"issue_date": 880387200000,
+			"sub_type": "ASH",
+			"low": 20.25,
+			"is_registration_desc": null,
+			"no_profit_desc": null,
+			"market_capital": 243717004074.0,
+			"dividend": 0.62,
+			"dividend_yield": 2.972,
+			"currency": "CNY",
+			"navps": 23.18,
+			"profit": 20431037479.76,
+			"timestamp": 1638860400000,
+			"pe_lyr": 11.929,
+			"amount": 1365040096.0,
+			"pledge_ratio": null,
+			"traded_amount_ext": null,
+			"is_registration": null,
+			"pb": 0.9,
+			"limit_up": 22.28,
+			"pe_ttm": 10.099,
+			"time": 1638860400000,
+			"open": 20.33
+		},
+		"others": {
+			"pankou_ratio": -29.27,
+			"cyb_switch": true
+		},
+		"tags": [{
+			"description": "\u6caa\u80a1\u901a",
+			"value": 1
+		}, {
+			"description": "\u878d",
+			"value": 6
+		}, {
+			"description": "\u7a7a",
+			"value": 7
+		}]
+	},
+	"error_code": 0,
+	"error_description": ""
+}
+```
