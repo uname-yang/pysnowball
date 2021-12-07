@@ -15,7 +15,7 @@ from pysnowball.capital import(
 from pysnowball.realtime import(quotec, pankou)
 
 from pysnowball.f10 import(skholderchg, skholder, main_indicator,
-                           industry, holders, bonus, org_holding_change, 
+                           industry, holders, bonus, org_holding_change,
                            industry_compare, business_analysis, shareschg, top_holders)
 
 from pysnowball.token import (get_token,set_token)
@@ -23,3 +23,5 @@ from pysnowball.token import (get_token,set_token)
 from pysnowball.user import(watch_list, watch_stock)
 
 from pysnowball.cube import(nav_daily, rebalancing_history)
+
+from pysnowball.quote import detail as quote_detail
