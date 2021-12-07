@@ -1706,7 +1706,7 @@ ball.quote_detail("SH600104")
 		"market": {
 			"status_id": 7,
 			"region": "CN",
-			"status": "\u5df2\u6536\u76d8",
+			"status": "已收盘",
 			"time_zone": "Asia/Shanghai",
 			"time_zone_desc": null,
 			"delay_tag": 0
@@ -1723,7 +1723,7 @@ ball.quote_detail("SH600104")
 			"limit_down": 18.23,
 			"no_profit": null,
 			"high": 20.96,
-			"float_market_capital": 243717004074.0,
+			"float_market_capital": 2.43717004074E11,
 			"timestamp_ext": null,
 			"lot_size": 100,
 			"lock_set": null,
@@ -1731,13 +1731,13 @@ ball.quote_detail("SH600104")
 			"chg": 0.61,
 			"eps": 2.07,
 			"last_close": 20.25,
-			"profit_four": 24133054122.05,
+			"profit_four": 2.413305412205E10,
 			"volume": 65949501,
 			"volume_ratio": 1.73,
-			"profit_forecast": 27133061018.0,
+			"profit_forecast": 2.7133061018E10,
 			"turnover_rate": 0.56,
 			"low52w": 18.03,
-			"name": "\u4e0a\u6c7d\u96c6\u56e2",
+			"name": "上汽集团",
 			"exchange": "SH",
 			"pe_forecast": 8.982,
 			"total_shares": 11683461365,
@@ -1758,15 +1758,15 @@ ball.quote_detail("SH600104")
 			"low": 20.25,
 			"is_registration_desc": null,
 			"no_profit_desc": null,
-			"market_capital": 243717004074.0,
+			"market_capital": 2.43717004074E11,
 			"dividend": 0.62,
 			"dividend_yield": 2.972,
 			"currency": "CNY",
 			"navps": 23.18,
-			"profit": 20431037479.76,
+			"profit": 2.043103747976E10,
 			"timestamp": 1638860400000,
 			"pe_lyr": 11.929,
-			"amount": 1365040096.0,
+			"amount": 1.365040096E9,
 			"pledge_ratio": null,
 			"traded_amount_ext": null,
 			"is_registration": null,
@@ -1781,13 +1781,13 @@ ball.quote_detail("SH600104")
 			"cyb_switch": true
 		},
 		"tags": [{
-			"description": "\u6caa\u80a1\u901a",
+			"description": "沪股通",
 			"value": 1
 		}, {
-			"description": "\u878d",
+			"description": "融",
 			"value": 6
 		}, {
-			"description": "\u7a7a",
+			"description": "空",
 			"value": 7
 		}]
 	},
