@@ -29,6 +29,8 @@ pip install pysnowball
 
 ![img](https://blog.crackcreed.com/content/images/2021/02/wechat_me-1.jpg)
 
+![wx](https://github.com/uname-yang/pysnowball/blob/master/wx.png?raw=true)
+
 ## APIs
 
 ### 实时行情
