@@ -78,6 +78,115 @@ ball.quotec('SZ002027')
 }
 ```
 
+获取某支股票的行情数据-详细
+
+```python
+import pysnowball as ball
+ball.quote_detail("SH600104")
+```
+
+结果显示：
+
+```json
+{
+    "data": {
+        "market": {
+            "status_id": 7,
+            "region": "CN",
+            "status": "已收盘",
+            "time_zone": "Asia/Shanghai",
+            "time_zone_desc": null,
+            "delay_tag": 0
+        },
+        "quote": {
+            "current_ext": null,
+            "symbol": "SH600104",
+            "volume_ext": null,
+            "high52w": 26.4319,
+            "delayed": 0,
+            "type": 11,
+            "tick_size": 0.01,
+            "float_shares": 11683461365,
+            "limit_down": 18.23,
+            "no_profit": null,
+            "high": 20.96,
+            "float_market_capital": 2.43717004074E11,
+            "timestamp_ext": null,
+            "lot_size": 100,
+            "lock_set": null,
+            "weighted_voting_rights": null,
+            "chg": 0.61,
+            "eps": 2.07,
+            "last_close": 20.25,
+            "profit_four": 2.413305412205E10,
+            "volume": 65949501,
+            "volume_ratio": 1.73,
+            "profit_forecast": 2.7133061018E10,
+            "turnover_rate": 0.56,
+            "low52w": 18.03,
+            "name": "上汽集团",
+            "exchange": "SH",
+            "pe_forecast": 8.982,
+            "total_shares": 11683461365,
+            "status": 1,
+            "is_vie_desc": null,
+            "security_status": null,
+            "code": "600104",
+            "goodwill_in_net_assets": 0.5219986746082667,
+            "avg_price": 20.698,
+            "percent": 3.01,
+            "weighted_voting_rights_desc": null,
+            "amplitude": 3.51,
+            "current": 20.86,
+            "is_vie": null,
+            "current_year_percent": -11.78,
+            "issue_date": 880387200000,
+            "sub_type": "ASH",
+            "low": 20.25,
+            "is_registration_desc": null,
+            "no_profit_desc": null,
+            "market_capital": 2.43717004074E11,
+            "dividend": 0.62,
+            "dividend_yield": 2.972,
+            "currency": "CNY",
+            "navps": 23.18,
+            "profit": 2.043103747976E10,
+            "timestamp": 1638860400000,
+            "pe_lyr": 11.929,
+            "amount": 1.365040096E9,
+            "pledge_ratio": null,
+            "traded_amount_ext": null,
+            "is_registration": null,
+            "pb": 0.9,
+            "limit_up": 22.28,
+            "pe_ttm": 10.099,
+            "time": 1638860400000,
+            "open": 20.33
+        },
+        "others": {
+            "pankou_ratio": -29.27,
+            "cyb_switch": true
+        },
+        "tags": [
+            {
+                "description": "沪股通",
+                "value": 1
+            },
+            {
+                "description": "融",
+                "value": 6
+            },
+            {
+                "description": "空",
+                "value": 7
+            }
+        ]
+    },
+    "error_code": 0,
+    "error_description": ""
+}
+```
+
 ### 实时分笔
 
 获取实时分笔数据，可以实时取得股票当前报价和成交信息
@@ -1692,108 +1801,443 @@ ball.rebalancing_history("ZH2567925")
 }
 ```
 
-
-### quote detail 股票详情信息
+### 可转债信息
 
 ```python
 import pysnowball as ball
-ball.quote_detail("SH600104")
+ball.convertible_bond(page_size=5, page_count=1)
 ```
 
 结果显示：
 
 ```json
 {
-	"data": {
-		"market": {
-			"status_id": 7,
-			"region": "CN",
-			"status": "已收盘",
-			"time_zone": "Asia/Shanghai",
-			"time_zone_desc": null,
-			"delay_tag": 0
-		},
-		"quote": {
-			"current_ext": null,
-			"symbol": "SH600104",
-			"volume_ext": null,
-			"high52w": 26.4319,
-			"delayed": 0,
-			"type": 11,
-			"tick_size": 0.01,
-			"float_shares": 11683461365,
-			"limit_down": 18.23,
-			"no_profit": null,
-			"high": 20.96,
-			"float_market_capital": 2.43717004074E11,
-			"timestamp_ext": null,
-			"lot_size": 100,
-			"lock_set": null,
-			"weighted_voting_rights": null,
-			"chg": 0.61,
-			"eps": 2.07,
-			"last_close": 20.25,
-			"profit_four": 2.413305412205E10,
-			"volume": 65949501,
-			"volume_ratio": 1.73,
-			"profit_forecast": 2.7133061018E10,
-			"turnover_rate": 0.56,
-			"low52w": 18.03,
-			"name": "上汽集团",
-			"exchange": "SH",
-			"pe_forecast": 8.982,
-			"total_shares": 11683461365,
-			"status": 1,
-			"is_vie_desc": null,
-			"security_status": null,
-			"code": "600104",
-			"goodwill_in_net_assets": 0.5219986746082667,
-			"avg_price": 20.698,
-			"percent": 3.01,
-			"weighted_voting_rights_desc": null,
-			"amplitude": 3.51,
-			"current": 20.86,
-			"is_vie": null,
-			"current_year_percent": -11.78,
-			"issue_date": 880387200000,
-			"sub_type": "ASH",
-			"low": 20.25,
-			"is_registration_desc": null,
-			"no_profit_desc": null,
-			"market_capital": 2.43717004074E11,
-			"dividend": 0.62,
-			"dividend_yield": 2.972,
-			"currency": "CNY",
-			"navps": 23.18,
-			"profit": 2.043103747976E10,
-			"timestamp": 1638860400000,
-			"pe_lyr": 11.929,
-			"amount": 1.365040096E9,
-			"pledge_ratio": null,
-			"traded_amount_ext": null,
-			"is_registration": null,
-			"pb": 0.9,
-			"limit_up": 22.28,
-			"pe_ttm": 10.099,
-			"time": 1638860400000,
-			"open": 20.33
-		},
-		"others": {
-			"pankou_ratio": -29.27,
-			"cyb_switch": true
-		},
-		"tags": [{
-			"description": "沪股通",
-			"value": 1
-		}, {
-			"description": "融",
-			"value": 6
-		}, {
-			"description": "空",
-			"value": 7
-		}]
-	},
-	"error_code": 0,
-	"error_description": ""
+    "version": "03070d792787f2543f5e2128fd0533e5",
+    "result": {
+        "pages": 632,
+        "data": [
+            {
+                "SECURITY_CODE": "113053",
+                "SECUCODE": "113053.SH",
+                "TRADE_MARKET": "CNSESH",
+                "SECURITY_NAME_ABBR": "隆22转债",
+                "DELIST_DATE": None,
+                "LISTING_DATE": None,
+                "CONVERT_STOCK_CODE": "601012",
+                "BOND_EXPIRE": "6",
+                "RATING": "AAA",
+                "VALUE_DATE": "2022-01-05 00: 00: 00",
+                "ISSUE_YEAR": "2022",
+                "CEASE_DATE": "2028-01-04 00: 00: 00",
+                "EXPIRE_DATE": "2028-01-05 00: 00: 00",
+                "PAY_INTEREST_DAY": "01-05",
+                "INTEREST_RATE_EXPLAIN": "第一年0.20%、第二年0.40%、第三年0.80%、第四年1.20%、第五年1.60%、第六年2.00%。",
+                "BOND_COMBINE_CODE": "22270600001JZJ",
+                "ACTUAL_ISSUE_SCALE": 70,
+                "ISSUE_PRICE": 100,
+                "REMARK": "本次发行的可转换公司债券给予公司原A股股东优先配售权。本次发行的隆22转债向发行人在股权登记日收市后登记在册的原A股股东实行优先配售,原股东优先配售后余额部分通过上交所交易系统发售。",
+                "PAR_VALUE": 100,
+                "ISSUE_OBJECT": "(1)向公司原股东优先配售:发行公告公布的股权登记日(即2022年1月4日,T-1日)收市后登记在册的公司所有股东。(2)网上发行:中华人民共和国境内持有上交所证券账户的自然人、法人、证券投资基金、符合法律规定的其他投资者等(国家法律、法规禁止者除外)。(3)本次发行的联合主承销商的自营账户不得参与本次申购。",
+                "REDEEM_TYPE": None,
+                "EXECUTE_REASON_HS": None,
+                "NOTICE_DATE_HS": None,
+                "NOTICE_DATE_SH": None,
+                "EXECUTE_PRICE_HS": None,
+                "EXECUTE_PRICE_SH": None,
+                "RECORD_DATE_SH": None,
+                "EXECUTE_START_DATESH": None,
+                "EXECUTE_START_DATEHS": None,
+                "EXECUTE_END_DATE": None,
+                "CORRECODE": "783012",
+                "CORRECODE_NAME_ABBR": "隆基发债",
+                "PUBLIC_START_DATE": "2022-01-05 00: 00: 00",
+                "CORRECODEO": "764012",
+                "CORRECODE_NAME_ABBRO": "隆基配债",
+                "BOND_START_DATE": "2022-01-07 00: 00: 00",
+                "SECURITY_START_DATE": "2022-01-04 00: 00: 00",
+                "SECURITY_SHORT_NAME": "隆基股份",
+                "FIRST_PER_PREPLACING": 1.293,
+                "ONLINE_GENERAL_AAU": 1000,
+                "ONLINE_GENERAL_LWR": 0.02376563,
+                "INITIAL_TRANSFER_PRICE": 82.65,
+                "TRANSFER_END_DATE": "2028-01-04 00: 00: 00",
+                "TRANSFER_START_DATE": "2022-07-11 00: 00: 00",
+                "RESALE_CLAUSE": "(1)有条件回售条款本次发行的可转换公司债券最后两个计息年度,如果公司股票在任何连续三十个交易日的收盘价低于当期转股价格的70%时,可转换公司债券持有人有权将其持有的可转换公司债券全部或部分按债券面值加上当期应计利息的价格回售给公司。若在前述三十个交易日内发生过转股价格因发生送股票股利、转增股本、增发新股(不包括因本次发行的可转换公司债券转股而增加的股本)、配股以及派发现金股利等情况而调整的情形,则在调整前的交易日按调整前的转股价格和收盘价计算,在调整后的交易日按调整后的转股价格和收盘价计算。如果出现转股价格向下修正的情况,则上述三十个交易日须从转股价格调整之后的第一个交易日起重新计算。本次发行的可转换公司债券最后两个计息年度,可转换公司债券持有人在每年回售条件首次满足后可按上述约定条件行使回售权一次,若在首次满足回售条件而可转换公司债券持有人未在公司届时公告的回售申报期内申报并实施回售的,该计息年度不应再行使回售权,可转换公司债券持有人不能多次行使部分回售权。(2)附加回售条款若本次发行可转换公司债券募集资金运用的实施情况与公司在募集说明书中的承诺相比出现变化,且该变化被中国证监会认定为改变募集资金用途的,可转换公司债券持有人享有一次以面值加上当期应计利息的价格向公司回售其持有的全部或部分可转换公司债券的权利。在上述情形下,可转换公司债券持有人可以在回售申报期内进行回售,在回售申报期内不实施回售的,不应再行使附加回售权(当期应计利息的计算方式参见赎回条款的相关内容)。",
+                "REDEEM_CLAUSE": "(1)到期赎回条款在本次发行的可转换公司债券期满后五个交易日内,公司将按债券面值的107%(含最后一期利息)的价格赎回未转股的可转换公司债券。(2)有条件赎回条款在本次发行的可转换公司债券转股期内,如果公司A股股票连续三十个交易日中至少有十五个交易日的收盘价不低于当期转股价格的130%(含130%),或本次发行的可转换公司债券未转股余额不足人民币3,
+                000万元时,公司有权按照债券面值加当期应计利息的价格赎回全部或部分未转股的可转换公司债券。当期应计利息的计算公式为:IA=B×i×t/365。IA:指当期应计利息;B:指本次发行的可转换公司债券持有人持有的可转换公司债券票面总金额;i:指可转换公司债券当年票面利率;t:指计息天数,即从上一个付息日起至本计息年度赎回日止的实际日历天数(算头不算尾)。若在前述三十个交易日内发生过转股价格调整的情形,则在转股价格调整日前的交易日按调整前的转股价格和收盘价计算,在转股价格调整日及之后的交易日按调整后的转股价格和收盘价计算。", "PARTY_NAME": "联合资信评估股份有限公司", "CONVERT_STOCK_PRICE": 80.27, "TRANSFER_PRICE": 82.65, "TRANSFER_VALUE": 97.1204, "CURRENT_BOND_PRICE": "-", "TRANSFER_PREMIUM_RATIO": 2.96, "CONVERT_STOCK_PRICEHQ": None, "MARKET": None, "RESALE_TRIG_PRICE": 57.86, "REDEEM_TRIG_PRICE": 107.45, "PBV_RATIO": 9.44, "IB_START_DATE": "2022-01-05 00: 00: 00", "IB_END_DATE": "2023-01-04 00: 00: 00", "CASHFLOW_DATE": "2023-01-05 00: 00: 00", "COUPON_IR": 0.2, "PARAM_NAME": "交易所系统网上向社会公众投资者发行,交易所系统网上向原A股无限售股东优先配售", "ISSUE_TYPE": "1,
+                4", "EXECUTE_REASON_SH": None, "PAYDAYNEW": "-05", "CURRENT_BOND_PRICENEW": 100
+            }
+        ],
+        "count": 632
+    },
+    "success": True,
+    "message": "ok",
+    "code": 0
+}
+```
+
+### 指数基本信息
+
+具体指数编码可参照：<https://www.csindex.com.cn>
+
+```python
+import pysnowball as ball
+ball.index_basic_info("399967") #中证军工指数
+```
+
+结果显示：
+
+```json
+{
+    "code": "200",
+    "msg": "Success",
+    "data": {
+        "indexFullNameCn": "中证军工指数",
+        "indexShortNameCn": "中证军工",
+        "indexFullNameEn": "CSI National Defense Industry Index",
+        "indexShortNameEn": "CSI National Defense",
+        "indexCode": "399967",
+        "ric": ".CSI399967",
+        "bloombergid": "CSI9967",
+        "basicDate": "2004-12-31",
+        "basicIndex": 1000.0,
+        "publishDate": "2013-12-26",
+        "publishChannelCn": "卫星",
+        "publishChannelEn": "卫星",
+        "consNumber": None,
+        "adjFreqCn": "每半年",
+        "adjFreqEn": "Semiannually",
+        "currencyCn": "人民币",
+        "currencyEn": "CNY",
+        "indexType": "stock",
+        "indexCnDesc": "中证军工指数从沪深市场中选取十大军工集团控股的且主营业务与军工行业相关的上市公司证券，以及其他主营业务为军工行业的代表性上市公司证券作为指数样本，以反映军工行业公司的整体表现。",
+        "indexEnDesc": "CSI National Defense Industry Index is designed to track the performance of national defense industry stocks. The Index consists of the companies which are controlled by the 10 largest military group corporations or operating in the national defense industry.       ",
+        "weightingType": None,
+        "weightingTypeEn": None,
+        "ifWeightCapped": None,
+        "ifWeightCappedEn": None,
+        "indexCompliance": None
+    },
+    "success": True
+}
+```
+
+### 指数详细信息
+
+具体指数编码可参照：<https://www.csindex.com.cn>
+
+```python
+import pysnowball as ball
+ball.index_details_data("399967") #中证军工指数
+```
+
+结果显示：
+
+```json
+{
+    "code": "200",
+    "msg": "Success",
+    "data": {
+        "编制方案": [
+            {
+                "fileName": "313_399967_Index_Methodology_en.pdf",
+                "filePath": "https://csi-web-dev.oss-cn-shanghai-finance-1-pub.aliyuncs.com/static/html/csindex/public/uploads/indices/detail/files/en/313_399967_Index_Methodology_en.pdf",
+                "fileType": "pdf"
+            }
+        ],
+        "发行人名单": None,
+        "备选名单": None,
+        "指数单张": [
+            {
+                "fileName": "399967factsheeten.pdf",
+                "filePath": "https://csi-web-dev.oss-cn-shanghai-finance-1-pub.aliyuncs.com/static/html/csindex/public/uploads/indices/detail/files/en/399967factsheeten.pdf",
+                "fileType": "pdf"
+            },
+            {
+                "fileName": "H20229factsheet.pdf",
+                "filePath": "https://csi-web-dev.oss-cn-shanghai-finance-1-pub.aliyuncs.com/static/html/csindex/public/uploads/indices/detail/files/en/H20229factsheet.pdf",
+                "fileType": "pdf"
+            }
+        ],
+        "样本权重": [
+            {
+                "fileName": "399967closeweight",
+                "filePath": "https://csi-web-dev.oss-cn-shanghai-finance-1-pub.aliyuncs.com/static/html/csindex/public/uploads/file/autofile/closeweight/399967closeweight.xls",
+                "fileType": "xls"
+            }
+        ],
+        "样本列表": [
+            {
+                "fileName": "399967cons",
+                "filePath": "https://csi-web-dev.oss-cn-shanghai-finance-1-pub.aliyuncs.com/static/html/csindex/public/uploads/file/autofile/cons/399967cons.xls",
+                "fileType": "xls"
+            }
+        ],
+        "指数估值": [
+            {
+                "fileName": "399967indicator",
+                "filePath": "https://csi-web-dev.oss-cn-shanghai-finance-1-pub.aliyuncs.com/static/html/csindex/public/uploads/file/autofile/indicator/399967indicator.xls",
+                "fileType": "xls"
+            }
+        ]
+    },
+    "success": True
+}
+```
+
+### 指数权重股前十
+
+具体指数编码可参照：<https://www.csindex.com.cn>
+
+```python
+import pysnowball as ball
+ball.index_weight_top10("399967") #中证军工指数
+```
+
+结果显示：
+
+```json
+{
+    "code": "200",
+    "msg": "Success",
+    "data": {
+        "updateDate": "2022-01-07",
+        "top5Sum": 27.35,
+        "top10Sum": 41.98,
+        "weightList": [
+            {
+                "rowNum": "1",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "002049",
+                "securityName": "紫光国微",
+                "securityNameEn": "Unigroup Guoxin Microelectronics Co., Ltd.",
+                "csiTypeL1": "信息技术",
+                "csiTypeL1En": "Information Technology",
+                "marketNameCn": "深圳证券交易所",
+                "marketNameEn": "Shenzhen  Exchange",
+                "weight": 7.92,
+                "preciseWeight": 7.9236710279527784
+            },
+            {
+                "rowNum": "2",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "600893",
+                "securityName": "航发动力",
+                "securityNameEn": "AVIC AVIATION ENGINE CORPORATION PLC.",
+                "csiTypeL1": "工业",
+                "csiTypeL1En": "Industrials",
+                "marketNameCn": "上海证券交易所",
+                "marketNameEn": "Shanghai  Exchange",
+                "weight": 6.62,
+                "preciseWeight": 6.620251010156067
+            },
+            {
+                "rowNum": "3",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "002179",
+                "securityName": "中航光电",
+                "securityNameEn": "AVIC Jonhon Optronic Technology Co.,Ltd.",
+                "csiTypeL1": "工业",
+                "csiTypeL1En": "Industrials",
+                "marketNameCn": "深圳证券交易所",
+                "marketNameEn": "Shenzhen  Exchange",
+                "weight": 4.5,
+                "preciseWeight": 4.502779273316449
+            },
+            {
+                "rowNum": "4",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "601989",
+                "securityName": "中国重工",
+                "securityNameEn": "China Shipbuilding Industry Co Ltd",
+                "csiTypeL1": "工业",
+                "csiTypeL1En": "Industrials",
+                "marketNameCn": "上海证券交易所",
+                "marketNameEn": "Shanghai  Exchange",
+                "weight": 4.28,
+                "preciseWeight": 4.284116029624741
+            },
+            {
+                "rowNum": "5",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "000768",
+                "securityName": "中航西飞",
+                "securityNameEn": "AVIC XI'AN AIRCRAFT INDUSTRY GROUP COMPANY LTD.",
+                "csiTypeL1": "工业",
+                "csiTypeL1En": "Industrials",
+                "marketNameCn": "深圳证券交易所",
+                "marketNameEn": "Shenzhen  Exchange",
+                "weight": 4.02,
+                "preciseWeight": 4.020696936529087
+            },
+            {
+                "rowNum": "6",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "000733",
+                "securityName": "振华科技",
+                "securityNameEn": "China Zhenhua (Group) Science & Technology Co Ltd",
+                "csiTypeL1": "信息技术",
+                "csiTypeL1En": "Information Technology",
+                "marketNameCn": "深圳证券交易所",
+                "marketNameEn": "Shenzhen  Exchange",
+                "weight": 3.73,
+                "preciseWeight": 3.7268720605305283
+            },
+            {
+                "rowNum": "7",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "600760",
+                "securityName": "中航沈飞",
+                "securityNameEn": "AVIC SHENYANG AIRCRAFT COMPANY LIMITED",
+                "csiTypeL1": "工业",
+                "csiTypeL1En": "Industrials",
+                "marketNameCn": "上海证券交易所",
+                "marketNameEn": "Shanghai  Exchange",
+                "weight": 3.23,
+                "preciseWeight": 3.229894039999866
+            },
+            {
+                "rowNum": "8",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "002013",
+                "securityName": "中航机电",
+                "securityNameEn": "AVIC Electromechanical Systems Co., Ltd.",
+                "csiTypeL1": "工业",
+                "csiTypeL1En": "Industrials",
+                "marketNameCn": "深圳证券交易所",
+                "marketNameEn": "Shenzhen  Exchange",
+                "weight": 2.77,
+                "preciseWeight": 2.773592431150194
+            },
+            {
+                "rowNum": "9",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "600765",
+                "securityName": "中航重机",
+                "securityNameEn": "Avic Heavy Machinery Co Ltd",
+                "csiTypeL1": "工业",
+                "csiTypeL1En": "Industrials",
+                "marketNameCn": "上海证券交易所",
+                "marketNameEn": "Shanghai  Exchange",
+                "weight": 2.46,
+                "preciseWeight": 2.4619565694074566
+            },
+            {
+                "rowNum": "10",
+                "indexCode": "399967",
+                "tradeDate": "20220107",
+                "securityCode": "002268",
+                "securityName": "卫士通",
+                "securityNameEn": "Westone Information Industry Inc",
+                "csiTypeL1": "信息技术",
+                "csiTypeL1En": "Information Technology",
+                "marketNameCn": "深圳证券交易所",
+                "marketNameEn": "Shenzhen  Exchange",
+                "weight": 2.44,
+                "preciseWeight": 2.4397637345969736
+            }
+        ]
+    },
+    "success": True
+}
+```
+
+### 指数收益
+
+具体指数编码可参照：<https://www.csindex.com.cn>
+
+```python
+import pysnowball as ball
+ball.index_perf_7("399967") #最近7天数据
+ball.index_perf_30("399967") #最近30天数据
+ball.index_perf_90("399967") #最近90天数据
+```
+
+结果显示：
+
+```json
+{
+    "code": "200",
+    "msg": "Success",
+    "data": [
+        {
+            "tradeDate": "20220104",
+            "indexCode": "399967",
+            "indexNameCnAll": "中证军工指数",
+            "indexNameCn": "中证军工",
+            "indexNameEnAll": "CSI National Defense Industry Index",
+            "indexNameEn": "CSI National Defense",
+            "open": 14894.07,
+            "high": 14972.07,
+            "low": 14631.92,
+            "close": 14732.88,
+            "change": -164.01,
+            "changePct": -1.1,
+            "tradingVol": 10.21,
+            "tradingValue": 306.36,
+            "consNumber": 64.0
+        },
+        {
+            "tradeDate": "20220105",
+            "indexCode": "399967",
+            "indexNameCnAll": "中证军工指数",
+            "indexNameCn": "中证军工",
+            "indexNameEnAll": "CSI National Defense Industry Index",
+            "indexNameEn": "CSI National Defense",
+            "open": 14690.36,
+            "high": 14750.57,
+            "low": 13958.84,
+            "close": 13979.6,
+            "change": -753.28,
+            "changePct": -5.11,
+            "tradingVol": 11.73,
+            "tradingValue": 361.02,
+            "consNumber": 64.0
+        },
+        {
+            "tradeDate": "20220106",
+            "indexCode": "399967",
+            "indexNameCnAll": "中证军工指数",
+            "indexNameCn": "中证军工",
+            "indexNameEnAll": "CSI National Defense Industry Index",
+            "indexNameEn": "CSI National Defense",
+            "open": 13902.36,
+            "high": 13983.25,
+            "low": 13664.19,
+            "close": 13805.97,
+            "change": -173.63,
+            "changePct": -1.24,
+            "tradingVol": 9.02,
+            "tradingValue": 277.33,
+            "consNumber": 64.0
+        },
+        {
+            "tradeDate": "20220107",
+            "indexCode": "399967",
+            "indexNameCnAll": "中证军工指数",
+            "indexNameCn": "中证军工",
+            "indexNameEnAll": "CSI National Defense Industry Index",
+            "indexNameEn": "CSI National Defense",
+            "open": 13834.46,
+            "high": 13928.36,
+            "low": 13605.02,
+            "close": 13614.24,
+            "change": -191.73,
+            "changePct": -1.39,
+            "tradingVol": 8.5,
+            "tradingValue": 231.62,
+            "consNumber": 64.0
+        }
+    ],
+    "success": True
 }
 ```

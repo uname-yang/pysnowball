@@ -10,7 +10,10 @@ def quotec(symbols):
     return utls.fetch_without_token(url)
 
 
+def quote_detail(symbol):
+    return utls.fetch(api_ref.realtime_quote_detail+symbol)
+
+
 def pankou(symbol):
     url = api_ref.realtime_pankou+symbol
     return utls.fetch(url)
-

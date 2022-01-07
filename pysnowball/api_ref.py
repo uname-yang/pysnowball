@@ -33,14 +33,21 @@ f10_indicator = "https://stock.xueqiu.com/v5/stock/f10/cn/indicator.json?symbol=
 # real time
 realtime_quote = "https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol="
 realtime_pankou = "https://stock.xueqiu.com/v5/stock/realtime/pankou.json?symbol="
+realtime_quote_detail = "https://stock.xueqiu.com/v5/stock/quote.json?extend=detail&symbol="
 
-#user
+# user
 watch_list = "https://stock.xueqiu.com/v5/stock/portfolio/list.json?system=true"
 watch_stock = "https://stock.xueqiu.com/v5/stock/portfolio/stock/list.json?size=1000&category=1&pid="
 
-#cube
+# cube
 nav_daily = "https://xueqiu.com/cubes/nav_daily/all.json?cube_symbol="
 rebalancing_history = "https://xueqiu.com/cubes/rebalancing/history.json?cube_symbol="
 
-# quote detail
-quote_detail = "https://stock.xueqiu.com/v5/stock/quote.json?symbol=%s&extend=detail"
+# eastmoney
+convertible_bond = "https://datacenter-web.eastmoney.com/api/data/v1/get?pageSize={}&pageNumber={}&sortColumns=PUBLIC_START_DATE&sortTypes=-1&reportName=RPT_BOND_CB_LIST&columns=ALL&quoteColumns=f2~01~CONVERT_STOCK_CODE~CONVERT_STOCK_PRICE%2Cf235~10~SECURITY_CODE~TRANSFER_PRICE%2Cf236~10~SECURITY_CODE~TRANSFER_VALUE%2Cf2~10~SECURITY_CODE~CURRENT_BOND_PRICE%2Cf237~10~SECURITY_CODE~TRANSFER_PREMIUM_RATIO%2Cf239~10~SECURITY_CODE~RESALE_TRIG_PRICE%2Cf240~10~SECURITY_CODE~REDEEM_TRIG_PRICE%2Cf23~01~CONVERT_STOCK_CODE~PBV_RATIO&source=WEB&client=WEB"
+
+# csindex
+index_basic_info = "https://www.csindex.com.cn/csindex-home/indexInfo/index-basic-info/{}"
+index_details_data = "https://www.csindex.com.cn/csindex-home/indexInfo/index-details-data?fileLang=1&indexCode={}"
+index_weight_top10 = "https://www.csindex.com.cn/csindex-home/index/weight/top10/{}"
+index_perf = "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode={}&startDate={}&endDate={}"
