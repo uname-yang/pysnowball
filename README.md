@@ -2248,14 +2248,20 @@ ball.index_perf_90("399967") #最近90天数据
 
 ```python
 import pysnowball as ball
-ball.northbound_shareholding_sh()
+ball.northbound_shareholding_sh() #默认当天
+ball.northbound_shareholding_sh('2022/01/19')
 ```
 
 结果显示：
 
 ```json
 [
-    {'code': '30002', 'name': 'RAYTRON TECHNOLOGY CO.,LTD. (A #688002)', 'shareholding': 6241840, 'shareholding_percent': '2.43%'}
+    {
+        "code": "30002", 
+        "name": "RAYTRON TECHNOLOGY CO.,LTD. (A #688002)", 
+        "shareholding": 6241840, 
+        "shareholding_percent": "2.43%"
+    },
     ...
 ]
 ```
@@ -2266,7 +2272,7 @@ ball.northbound_shareholding_sh()
 
 ```python
 import pysnowball as ball
-data = ball.northbound_shareholding_sz()
+data = ball.northbound_shareholding_sz() #默认当天 可选填日期-格式：'2022/01/19'
 print(data[0])
 ```
 
