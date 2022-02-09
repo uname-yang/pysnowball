@@ -2241,3 +2241,42 @@ ball.index_perf_90("399967") #最近90天数据
     "success": True
 }
 ```
+
+### 深港通 北向数据 STOCK CONNECT NORTHBOUND SHAREHOLDING SEARCH BY DATE
+
+> 可参照：<https://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t=sz>
+
+```python
+import pysnowball as ball
+ball.northbound_shareholding_sh()
+```
+
+结果显示：
+
+```json
+[
+    {'code': '30002', 'name': 'RAYTRON TECHNOLOGY CO.,LTD. (A #688002)', 'shareholding': 6241840, 'shareholding_percent': '2.43%'}
+    ...
+]
+```
+
+### 沪港通 北向数据 STOCK CONNECT NORTHBOUND SHAREHOLDING SEARCH BY DATE
+
+> 可参照：<https://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t=sh>
+
+```python
+import pysnowball as ball
+data = ball.northbound_shareholding_sz()
+print(data[0])
+```
+
+结果显示：
+
+```json
+{
+    "code": "70001", 
+    "name": "PING AN BANK CO., LTD. (A #000001)", 
+    "shareholding": 1839598842, 
+    "shareholding_percent": "9.47%"
+}
+```

@@ -29,3 +29,6 @@ from pysnowball.bond import(convertible_bond)
 from pysnowball.index import(index_basic_info, index_details_data, index_weight_top10,
                              index_perf_7, index_perf_30, index_perf_90)
 
+from pysnowball.hkex import(
+    northbound_shareholding_sh, northbound_shareholding_sz)
+

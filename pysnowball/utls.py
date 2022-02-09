@@ -1,7 +1,7 @@
 import requests
 import json
+from datetime import datetime
 
-import pysnowball.cons as cons
 import pysnowball.token as token
 
 
@@ -79,3 +79,36 @@ def fetch_csindex(url):
         raise Exception(response.content)
 
     return json.loads(response.content)
+
+
+def fetch_hkc(url, txt_date=None):
+    today = datetime.today()
+    if txt_date is None:
+        txt_date = today.strftime('%Y/%m/%d')
+    today_str = today.strftime('%Y%m%d')
+    payload = {
+        '__VIEWSTATE': '/wEPDwUJNjIxMTYzMDAwZGSFj8kdzCLeVLiJkFRvN5rjsPotqw==',
+        '__VIEWSTATEGENERATOR': '3C67932C',
+        '__EVENTVALIDATION': '/wEdAAdbi0fj+ZSDYaSP61MAVoEdVobCVrNyCM2j+bEk3ygqmn1KZjrCXCJtWs9HrcHg6Q64ro36uTSn/Z2SUlkm9HsG7WOv0RDD9teZWjlyl84iRMtpPncyBi1FXkZsaSW6dwqO1N1XNFmfsMXJasjxX85ju3P1WAPUeweM/r0/uwwyYLgN1B8=',
+        'today': today_str,
+        'sortBy': 'stockcode',
+        'sortDirection': 'asc',
+        'alertMsg': '',
+        'txtShareholdingDate': txt_date,
+        'btnSearch': 'Search'
+    }
+    # payload = parse.urlencode(payload)
+    headers = {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+    
+    requests.packages.urllib3.disable_warnings()
+    response = requests.post(url, headers=headers, data=payload, verify=False)
+    
+    # print(url)
+    # print(response)
+    # print(response.content)
+
+    if response.status_code != 200:
+        raise Exception(response.content)
+    return response.content

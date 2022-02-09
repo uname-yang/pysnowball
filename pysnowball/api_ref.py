@@ -51,3 +51,7 @@ index_basic_info = "https://www.csindex.com.cn/csindex-home/indexInfo/index-basi
 index_details_data = "https://www.csindex.com.cn/csindex-home/indexInfo/index-details-data?fileLang=1&indexCode={}"
 index_weight_top10 = "https://www.csindex.com.cn/csindex-home/index/weight/top10/{}"
 index_perf = "https://www.csindex.com.cn/csindex-home/perf/index-perf?indexCode={}&startDate={}&endDate={}"
+
+# hkex
+hkex_connect = "http://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t="
+
