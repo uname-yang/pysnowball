@@ -2286,3 +2286,96 @@ print(data[0])
     "shareholding_percent": "9.47%"
 }
 ```
+
+### fund
+
+
+#### fund_detail
+
+```python
+import pysnowball as ball
+ball.fund_detail("008975")
+```
+
+[结果显示](APIs/fund_detail.md)
+
+#### fund_info
+
+```python
+import pysnowball as ball
+
+ball.fund_info("008975")
+```
+
+[结果显示](APIs/fund_info.md)
+
+
+#### fund_growth
+
+```python
+import pysnowball as ball
+ball.fund_growth("008975")
+```
+
+[结果显示](APIs/fund_growth.md)
+
+
+
+#### fund_nav_history
+
+```python
+import pysnowball as ball
+ball.fund_nav_history("008975")
+```
+
+[结果显示](APIs/fund_nav_history.md)
+
+
+#### fund_achievement
+
+```python
+import pysnowball as ball
+ball.fund_achievement("008975")
+```
+
+[结果显示](APIs/fund_achievement.md)
+
+
+#### fund_asset
+
+```python
+import pysnowball as ball
+ball.fund_asset("008975")
+```
+
+[结果显示](APIs/fund_asset.md)
+
+
+#### fund_manager
+
+```python
+import pysnowball as ball
+ball.fund_manager("008975")
+```
+
+[结果显示](APIs/fund_manager.md)
+
+
+#### fund_trade_date
+
+```python
+import pysnowball as ball
+ball.fund_trade_date("008975")
+```
+
+[结果显示](APIs/fund_trade_date.md)
+
+
+#### fund_derived
+
+```python
+import pysnowball as ball
+ball.fund_derived("008975")
+```
+
+[结果显示](APIs/fund_derived.md)

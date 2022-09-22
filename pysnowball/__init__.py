@@ -32,3 +32,7 @@ from pysnowball.index import(index_basic_info, index_details_data, index_weight_
 from pysnowball.hkex import(
     northbound_shareholding_sh, northbound_shareholding_sz)
 
+from pysnowball.fund import (fund_detail, fund_info, fund_growth,
+                             fund_nav_history, fund_derived, fund_asset,
+                             fund_manager, fund_achievement, fund_trade_date)
+

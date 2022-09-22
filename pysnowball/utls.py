@@ -112,3 +112,16 @@ def fetch_hkc(url, txt_date=None):
     if response.status_code != 200:
         raise Exception(response.content)
     return response.content
+
+
+def fetch_danjuan_fund(url):
+    fund_header = {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',
+    }
+
+    response = requests.request(method="GET", url=url, headers=fund_header)
+
+    if response.status_code != 200:
+        raise Exception(response.content)
+
+    return response.json()
