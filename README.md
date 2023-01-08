@@ -251,6 +251,18 @@ ball.pankou('SZ002027')
 }
 ```
 
+### K线
+
+获取实时分笔数据，可以实时取得股票当前报价和成交信息
+
+```python
+import pysnowball as ball
+ball.kline('SZ002027')
+ball.kline('SZ002027', 300)
+```
+
+[结果显示](APIs/realtime_kline.md)
+
 ### 业绩预告
 
 按年度获取业绩预告数据
