@@ -1,5 +1,4 @@
-import json
-import os
+import time
 from pysnowball import cons
 from pysnowball import api_ref
 from pysnowball import utls
@@ -17,3 +16,7 @@ def quote_detail(symbol):
 def pankou(symbol):
     url = api_ref.realtime_pankou+symbol
     return utls.fetch(url)
+
+
+def kline(symbol, days=100):
+    return utls.fetch(api_ref.kline.format(symbol, int(time.time()*1000), days))

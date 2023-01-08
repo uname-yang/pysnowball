@@ -251,6 +251,18 @@ ball.pankou('SZ002027')
 }
 ```
 
+### K线
+
+获取K线数据。第二参数可制定从现在到N天前，默认100.
+
+```python
+import pysnowball as ball
+ball.kline('SZ002027')
+ball.kline('SZ002027', 300)
+```
+
+[结果显示](APIs/realtime_kline.md)
+
 ### 业绩预告
 
 按年度获取业绩预告数据

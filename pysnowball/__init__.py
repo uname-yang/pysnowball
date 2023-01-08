@@ -12,7 +12,7 @@ from pysnowball.report import (report, earningforecast)
 from pysnowball.capital import(
     margin, blocktrans, capital_assort, capital_flow, capital_history)
 
-from pysnowball.realtime import(quotec, pankou, quote_detail)
+from pysnowball.realtime import(quotec, pankou, quote_detail, kline)
 
 from pysnowball.f10 import(skholderchg, skholder, main_indicator,
                            industry, holders, bonus, org_holding_change,
