@@ -36,3 +36,4 @@ from pysnowball.fund import (fund_detail, fund_info, fund_growth,
                              fund_nav_history, fund_derived, fund_asset,
                              fund_manager, fund_achievement, fund_trade_date)
 
+from pysnowball.suggest import suggest_stock
