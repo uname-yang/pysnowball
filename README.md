@@ -2391,3 +2391,46 @@ ball.fund_derived("008975")
 ```
 
 [结果显示](APIs/fund_derived.md)
+
+
+### 关键词搜索股票代码
+```python
+import pysnowball as ball
+ball.suggest_stock("tyzn")
+```
+
+结果显示：
+```json
+{
+    "code": 200,
+    "data": [
+        {
+            "code": "SH603273",
+            "label": "11",
+            "query": "天元智能",
+            "state": 1,
+            "stock_type": 11,
+            "type": 1
+        },
+        {
+            "code": "NQ837134",
+            "label": "61",
+            "query": "天元智能",
+            "state": 2,
+            "stock_type": 61,
+            "type": 1
+        }
+    ],
+    "message": "success",
+    "meta": {
+        "count": 2,
+        "feedback": -1,
+        "has_next_page": true,
+        "maxPage": 1,
+        "page": 1,
+        "query_id": 1726881996430614528,
+        "size": 2
+    },
+    "success": true
+}
+```
