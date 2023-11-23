@@ -80,3 +80,5 @@ fund_trade_date = "https://danjuanapp.com/djapi/fund/order/v2/trade_date?fd_code
 # param is fund code
 fund_derived = "https://danjuanapp.com/djapi/fund/derived/%s"
 
+# suggest
+suggest_stock = "https://xueqiu.com/query/v1/suggest_stock.json?q="
