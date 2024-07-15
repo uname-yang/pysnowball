@@ -13,8 +13,7 @@ long_desc = """
 
 ```python
 >>> import pysnowball as ball
->>> ball.set_token('xq_a_token=651af***************031c96a315c;')
-'xq_a_token=651af***************031c96a315c;'
+>>> ball.set_token('xq_a_token=651af***************031c96a315c;u=9******')
 >>> ball.cash_flow('SH600000')
 ```
 
@@ -76,7 +75,7 @@ def read_install_requires():
 
 setuptools.setup(
     name="pysnowball",
-    version="0.1.2",
+    version="0.1.3",
     author="Yang Yu",
     author_email="yang.lights@hotmail.com",
     description="xueqiu api python client | 集成雪球API",

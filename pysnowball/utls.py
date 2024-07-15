@@ -9,7 +9,7 @@ def fetch(url, host="stock.xueqiu.com"):
     HEADERS = {'Host': host,
                'Accept': 'application/json',
                'Cookie': token.get_token(),
-               'User-Agent': 'Xueqiu iPhone 11.8',
+               'User-Agent': 'Xueqiu iPhone 14.15.1',
                'Accept-Language': 'zh-Hans-CN;q=1, ja-JP;q=0.9',
                'Accept-Encoding': 'br, gzip, deflate',
                'Connection': 'keep-alive'}
