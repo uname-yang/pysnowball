@@ -1812,6 +1812,226 @@ ball.rebalancing_history("ZH2567925")
 }
 ```
 
+### cube 组合实时持仓
+
+```python
+import pysnowball as ball
+ball.rebalancing_current("ZH2567925")
+```
+
+结果显示：
+
+```json
+{
+    "last_rb": {
+        "id": 137430048,
+        "status": "success",
+        "cube_id": 2601938,
+        "prev_bebalancing_id": 136910290,
+        "category": "user_rebalancing",
+        "exe_strategy": "intraday_all",
+        "created_at": 1681906004435,
+        "updated_at": 1681954257274,
+        "cash": 0,
+        "error_code": null,
+        "cash_value": 0.00000195,
+        "error_message": "你上一笔调仓已成交。",
+        "error_status": null,
+        "holdings": [
+            {
+                "stock_id": 1059357,
+                "weight": 25.89,
+                "segment_name": "其他",
+                "segment_id": 12412375,
+                "stock_name": "百济神州-U",
+                "stock_symbol": "SH688235",
+                "segment_color": "#0055aa",
+                "proactive": false,
+                "volume": 0.00116103
+            },
+            {
+                "stock_id": 1028063,
+                "weight": 25.17,
+                "segment_name": "ETF",
+                "segment_id": 13386607,
+                "stock_name": "中概互联网ETF",
+                "stock_symbol": "SH513050",
+                "segment_color": "#e84e24",
+                "proactive": false,
+                "volume": 0.17937727
+            },
+            {
+                "stock_id": 1057809,
+                "weight": 11.46,
+                "segment_name": "ETF",
+                "segment_id": 13386607,
+                "stock_name": "香港医药ETF",
+                "stock_symbol": "SH513700",
+                "segment_color": "#e84e24",
+                "proactive": false,
+                "volume": 0.2324553
+            },
+            {
+                "stock_id": 1055641,
+                "weight": 12.55,
+                "segment_name": "其他",
+                "segment_id": 12412375,
+                "stock_name": "创新药ETF",
+                "stock_symbol": "SH515120",
+                "segment_color": "#0055aa",
+                "proactive": false,
+                "volume": 0.19915412
+            },
+            {
+                "stock_id": 1057632,
+                "weight": 14.47,
+                "segment_name": "其他",
+                "segment_id": 12412375,
+                "stock_name": "英科再生",
+                "stock_symbol": "SH688087",
+                "segment_color": "#0055aa",
+                "proactive": false,
+                "volume": 0.0037463
+            },
+            {
+                "stock_id": 1055257,
+                "weight": 10.46,
+                "segment_name": "其他",
+                "segment_id": 12412375,
+                "stock_name": "卓越新能",
+                "stock_symbol": "SH688196",
+                "segment_color": "#0055aa",
+                "proactive": false,
+                "volume": 0.00247898
+            }
+        ],
+        "rebalancing_histories": [
+
+        ],
+        "comment": "",
+        "diff": 0,
+        "new_buy_count": 0
+    },
+    "last_success_rb": {
+        "id": 137430048,
+        "status": "success",
+        "cube_id": 2601938,
+        "prev_bebalancing_id": 136910290,
+        "category": "user_rebalancing",
+        "exe_strategy": "intraday_all",
+        "created_at": 1681906004435,
+        "updated_at": 1681954257274,
+        "cash": 0,
+        "error_code": null,
+        "cash_value": 0.00000195,
+        "error_message": "你上一笔调仓已成交。",
+        "error_status": null,
+        "holdings": [
+            {
+                "stock_id": 1059357,
+                "weight": 25.89,
+                "segment_name": "其他",
+                "segment_id": 12412375,
+                "stock_name": "百济神州-U",
+                "stock_symbol": "SH688235",
+                "segment_color": "#0055aa",
+                "proactive": false,
+                "volume": 0.00116103
+            },
+            {
+                "stock_id": 1028063,
+                "weight": 25.17,
+                "segment_name": "ETF",
+                "segment_id": 13386607,
+                "stock_name": "中概互联网ETF",
+                "stock_symbol": "SH513050",
+                "segment_color": "#e84e24",
+                "proactive": false,
+                "volume": 0.17937727
+            },
+            {
+                "stock_id": 1057809,
+                "weight": 11.46,
+                "segment_name": "ETF",
+                "segment_id": 13386607,
+                "stock_name": "香港医药ETF",
+                "stock_symbol": "SH513700",
+                "segment_color": "#e84e24",
+                "proactive": false,
+                "volume": 0.2324553
+            },
+            {
+                "stock_id": 1055641,
+                "weight": 12.55,
+                "segment_name": "其他",
+                "segment_id": 12412375,
+                "stock_name": "创新药ETF",
+                "stock_symbol": "SH515120",
+                "segment_color": "#0055aa",
+                "proactive": false,
+                "volume": 0.19915412
+            },
+            {
+                "stock_id": 1057632,
+                "weight": 14.47,
+                "segment_name": "其他",
+                "segment_id": 12412375,
+                "stock_name": "英科再生",
+                "stock_symbol": "SH688087",
+                "segment_color": "#0055aa",
+                "proactive": false,
+                "volume": 0.0037463
+            },
+            {
+                "stock_id": 1055257,
+                "weight": 10.46,
+                "segment_name": "其他",
+                "segment_id": 12412375,
+                "stock_name": "卓越新能",
+                "stock_symbol": "SH688196",
+                "segment_color": "#0055aa",
+                "proactive": false,
+                "volume": 0.00247898
+            }
+        ],
+        "rebalancing_histories": [
+
+        ],
+        "comment": "",
+        "diff": 0,
+        "new_buy_count": 0
+    }
+}
+```
+
+### cube 组合实时净值
+
+```python
+import pysnowball as ball
+ball.quote_current("ZH2567925")
+```
+
+结果显示：
+
+```json
+{
+    "ZH2567925": {
+        "symbol": "ZH2567925",
+        "market": "cn",
+        "name": "混合",
+        "net_value": "0.8994",
+        "daily_gain": "-0.64",
+        "monthly_gain": "1.66",
+        "total_gain": "-10.06",
+        "annualized_gain": "-5.42",
+        "hasexist": "false",
+        "closed_at": "1683208040790",
+        "badges_exist": "false",
+        "game_id": 0
+    }
+}
+```
+
 ### 可转债信息
 
 ```python
