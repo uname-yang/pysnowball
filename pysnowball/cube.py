@@ -12,3 +12,11 @@ def rebalancing_history(symbol, count=20, page=1):
     url = url + "&count=" + str(count)
     url = url + "&page=" + str(page)
     return utls.fetch(url, host)
+
+def rebalancing_current(symbol):
+    url = api_ref.rebalancing_current + symbol
+    return utls.fetch(url, host)
+
+def quote_current(symbol):
+    url = api_ref.quote_current + symbol
+    return utls.fetch(url, host)
