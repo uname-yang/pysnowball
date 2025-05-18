@@ -252,12 +252,25 @@ ball.pankou('SZ002027')
 
 ### K线
 
-获取K线数据。第二参数可制定从现在到N天前，默认100.
+获取K线数据。
+
+第二参数可指定period，默认day;第三参数可指定count，默认284。
+
+```
+原K线接口中 https://stock.xueqiu.com/v5/stock/chart/kline.json?symbol=SH600219&begin=1747625277024&period=day&type=before&count=-284&indicator=kline,pe,pb,ps,pcf,market_capital,agt,ggt,balance 的 period 会根据不同的类型返回不同周期的K线
+
+日K：day
+周K：week
+月K：month
+60分K：60m
+30分K：30m
+1分K：1m
+```
 
 ```python
 import pysnowball as ball
 ball.kline('SZ002027')
-ball.kline('SZ002027', 300)
+ball.kline('SZ002027','day', 30)
 ```
 
 [结果显示](APIs/realtime_kline.md)

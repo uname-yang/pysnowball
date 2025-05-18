@@ -22,7 +22,7 @@ from pysnowball.token import (get_token,set_token)
 
 from pysnowball.user import(watch_list, watch_stock)
 
-from pysnowball.cube import(nav_daily, rebalancing_history)
+from pysnowball.cube import(nav_daily, rebalancing_history, rebalancing_current, quote_current)
 
 from pysnowball.bond import(convertible_bond)
 
