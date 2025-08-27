@@ -17,6 +17,12 @@ def pankou(symbol):
     url = api_ref.realtime_pankou+symbol
     return utls.fetch(url)
 
-
-def kline(symbol,period='day',count=284):
-    return utls.fetch(api_ref.kline.format(symbol, int(time.time()*1000), period, count))
+def kline(symbol,begin=int(time.time()*1000),period='day',count=284):
+    ''' Get kline data
+    Args:
+        symbol: stock symbol, e.g. 'SZ000001'
+        begain: timestamp in milliseconds = int(time.time()*1000), default current time
+        count: number of data points to fetch, default 284 (fetch all available data)
+        period: '1m', '5m', '15m', '30m', '60m', 'day', 'week', 'month', 'quarter','year'
+    '''
+    return utls.fetch(api_ref.kline.format(symbol, begin, period, count))
