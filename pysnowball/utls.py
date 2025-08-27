@@ -129,3 +129,20 @@ def fetch_danjuan_fund(url,host="danjuanfunds.com"):
         raise Exception(response.content)
 
     return response.json()
+
+def post_danjuan_fund(url, payload, host="danjuanfunds.com"):
+    fund_header = {'Host': host,
+               'Accept': 'application/json',
+               'Content-Type': 'application/x-www-form-urlencoded',
+               'Cookie': token.get_danjuan_token(),
+               'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+               'Accept-Language': 'zh-Hans-CN;q=1, ja-JP;q=0.9',
+               'Accept-Encoding': 'br, gzip, deflate',
+               'Connection': 'keep-alive'}
+
+    response = requests.post(url, headers=fund_header, data=payload)
+
+    if response.status_code != 200:
+        raise Exception(response.content)
+
+    return response.json()
