@@ -43,6 +43,7 @@ kline = "https://stock.xueqiu.com/v5/stock/chart/kline.json?symbol={}&begin={}&p
 # user
 watch_list = "https://stock.xueqiu.com/v5/stock/portfolio/list.json?system=true"
 watch_stock = "https://stock.xueqiu.com/v5/stock/portfolio/stock/list.json?size=1000&category=1&pid="
+watch_funds = "https://stock.xueqiu.com/v5/stock/portfolio/stock/list.json?size=1000&category=2&pid="
 
 # cube
 nav_daily = "https://xueqiu.com/cubes/nav_daily/all.json?cube_symbol="
