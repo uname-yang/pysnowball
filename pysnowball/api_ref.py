@@ -64,24 +64,24 @@ hkex_connect = "http://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t="
 
 # fund
 # param is fund code
-fund_detail = "https://danjuanapp.com/djapi/fund/detail/%s"
+fund_detail = "https://danjuanfunds.com/djapi/fund/detail/%s"
 # param is fund code
-fund_info = "https://danjuanapp.com/djapi/fund/%s"
+fund_info = "https://danjuanfunds.com/djapi/fund/%s"
 # first param is fund code, second is 'ty'
-fund_growth = "https://danjuanapp.com/djapi/fund/growth/%s?day=%s"
+fund_growth = "https://danjuanfunds.com/djapi/fund/growth/%s?day=%s"
 # first param is fund code
-fund_nav_history = "https://danjuanapp.com/djapi/fund/nav/history/%s?page=%s&size=%s"
+fund_nav_history = "https://danjuanfunds.com/djapi/fund/nav/history/%s?page=%s&size=%s"
 # param is fund code
-fund_achievement = "https://danjuanapp.com/djapi/fundx/base/fund/achievement/%s"
+fund_achievement = "https://danjuanfunds.com/djapi/fundx/base/fund/achievement/%s"
 # 基金持仓：param is fund code
-fund_asset = "https://danjuanapp.com/djapi/fundx/base/fund/record/asset/percent?fund_code=%s"
+fund_asset = "https://danjuanfunds.com/djapi/fundx/base/fund/record/asset/percent?fund_code=%s"
 # 基金管理人: param is fund code
-fund_manager = "https://danjuanapp.com/djapi/fundx/base/fund/record/manager/list?fund_code=%s&post_status=%s"
-# https://danjuanapp.com/djapi/fund/base/quote/data/index/analysis/008975
+fund_manager = "https://danjuanfunds.com/djapi/fundx/base/fund/record/manager/list?fund_code=%s&post_status=%s"
+# https://danjuanfunds.com/djapi/fund/base/quote/data/index/analysis/008975
 # param is fund code
-fund_trade_date = "https://danjuanapp.com/djapi/fund/order/v2/trade_date?fd_code=%s"
+fund_trade_date = "https://danjuanfunds.com/djapi/fund/order/v2/trade_date?fd_code=%s"
 # param is fund code
-fund_derived = "https://danjuanapp.com/djapi/fund/derived/%s"
+fund_derived = "https://danjuanfunds.com/djapi/fund/derived/%s"
 
 # suggest
 suggest_stock = "https://xueqiu.com/query/v1/suggest_stock.json?q="

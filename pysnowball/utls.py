@@ -114,10 +114,14 @@ def fetch_hkc(url, txt_date=None):
     return response.content
 
 
-def fetch_danjuan_fund(url):
-    fund_header = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',
-    }
+def fetch_danjuan_fund(url,host="danjuanfunds.com"):
+    fund_header = {'Host': host,
+               'Accept': 'application/json',
+               'Cookie': token.get_danjuan_token(),
+               'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+               'Accept-Language': 'zh-Hans-CN;q=1, ja-JP;q=0.9',
+               'Accept-Encoding': 'br, gzip, deflate',
+               'Connection': 'keep-alive'}
 
     response = requests.request(method="GET", url=url, headers=fund_header)
 
