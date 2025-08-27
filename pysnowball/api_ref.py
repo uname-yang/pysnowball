@@ -83,6 +83,16 @@ fund_manager = "https://danjuanfunds.com/djapi/fundx/base/fund/record/manager/li
 fund_trade_date = "https://danjuanfunds.com/djapi/fund/order/v2/trade_date?fd_code=%s"
 # param is fund code
 fund_derived = "https://danjuanfunds.com/djapi/fund/derived/%s"
+# Yield info: param is fund code
+fund_yield = "https://danjuanfunds.com/djapi/fundx/autoinvest/quote/yield/list?fd_code=%s"
+# Fund search: params are keyword and cookie
+fund_search = "https://danjuanfunds.com/djapi/v2/search?key=%s&xq_access_token=&source=index"
+# Fund does exist in watchlist: param is fund code
+fund_exist = "https://danjuanfunds.com/xqstock/v5/stock/portfolio/stock/hasexist.json?symbol=%s"
+# POST: Add to watchlist
+funds_add = "https://danjuanfunds.com/xqstock/v5/stock/portfolio/stock/add.json"
+# POST: Remove from watchlist
+funds_remove = "https://danjuanfunds.com/xqstock/v5/stock/portfolio/stock/cancel.json"
 
 # suggest
 suggest_stock = "https://xueqiu.com/query/v1/suggest_stock.json?q="
