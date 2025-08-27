@@ -8,3 +8,7 @@ def watch_list():
 def watch_stock(id):
     url = api_ref.watch_stock + str(id)
     return utls.fetch(url)
+
+def watch_funds(id):
+    url = api_ref.watch_funds + str(id)
+    return utls.fetch(url)
