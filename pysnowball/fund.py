@@ -11,6 +11,10 @@ def fund_info(fund_code):
 
 
 def fund_growth(fund_code, day='ty'):
+    '''
+    Args:
+        day: 'ty' (default) - this year,'1m','3m','6m','1y','2y','3y','5y','all'
+    '''
     return utls.fetch_danjuan_fund(api_ref.fund_growth % (fund_code, day))
 
 
