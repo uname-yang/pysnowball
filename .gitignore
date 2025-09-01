@@ -108,3 +108,12 @@ venv.bak/
 
 # vscode
 .vscode/
+
+# history plugin
+.history/
+
+# My test
+tests/test_main.py
+
+# MacOS
+.DS_Store

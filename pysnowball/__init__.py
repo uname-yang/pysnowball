@@ -20,7 +20,7 @@ from pysnowball.f10 import(skholderchg, skholder, main_indicator,
 
 from pysnowball.token import (get_token,set_token)
 
-from pysnowball.user import(watch_list, watch_stock)
+from pysnowball.user import(watch_list, watch_stock, watch_funds)
 
 from pysnowball.cube import(nav_daily, rebalancing_history, rebalancing_current, quote_current)
 
@@ -34,6 +34,6 @@ from pysnowball.hkex import(
 
 from pysnowball.fund import (fund_detail, fund_info, fund_growth,
                              fund_nav_history, fund_derived, fund_asset,
-                             fund_manager, fund_achievement, fund_trade_date)
+                             fund_manager, fund_achievement, fund_trade_date, fund_yield, fund_search, fund_exist, funds_add, funds_remove)
 
 from pysnowball.suggest import suggest_stock

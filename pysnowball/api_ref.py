@@ -43,6 +43,7 @@ kline = "https://stock.xueqiu.com/v5/stock/chart/kline.json?symbol={}&begin={}&p
 # user
 watch_list = "https://stock.xueqiu.com/v5/stock/portfolio/list.json?system=true"
 watch_stock = "https://stock.xueqiu.com/v5/stock/portfolio/stock/list.json?size=1000&category=1&pid="
+watch_funds = "https://stock.xueqiu.com/v5/stock/portfolio/stock/list.json?size=1000&category=2&pid="
 
 # cube
 nav_daily = "https://xueqiu.com/cubes/nav_daily/all.json?cube_symbol="
@@ -64,24 +65,34 @@ hkex_connect = "http://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t="
 
 # fund
 # param is fund code
-fund_detail = "https://danjuanapp.com/djapi/fund/detail/%s"
+fund_detail = "https://danjuanfunds.com/djapi/fund/detail/%s"
 # param is fund code
-fund_info = "https://danjuanapp.com/djapi/fund/%s"
+fund_info = "https://danjuanfunds.com/djapi/fund/%s"
 # first param is fund code, second is 'ty'
-fund_growth = "https://danjuanapp.com/djapi/fund/growth/%s?day=%s"
+fund_growth = "https://danjuanfunds.com/djapi/fund/growth/%s?day=%s"
 # first param is fund code
-fund_nav_history = "https://danjuanapp.com/djapi/fund/nav/history/%s?page=%s&size=%s"
+fund_nav_history = "https://danjuanfunds.com/djapi/fund/nav/history/%s?page=%s&size=%s"
 # param is fund code
-fund_achievement = "https://danjuanapp.com/djapi/fundx/base/fund/achievement/%s"
+fund_achievement = "https://danjuanfunds.com/djapi/fundx/base/fund/achievement/%s"
 # 基金持仓：param is fund code
-fund_asset = "https://danjuanapp.com/djapi/fundx/base/fund/record/asset/percent?fund_code=%s"
+fund_asset = "https://danjuanfunds.com/djapi/fundx/base/fund/record/asset/percent?fund_code=%s"
 # 基金管理人: param is fund code
-fund_manager = "https://danjuanapp.com/djapi/fundx/base/fund/record/manager/list?fund_code=%s&post_status=%s"
-# https://danjuanapp.com/djapi/fund/base/quote/data/index/analysis/008975
+fund_manager = "https://danjuanfunds.com/djapi/fundx/base/fund/record/manager/list?fund_code=%s&post_status=%s"
+# https://danjuanfunds.com/djapi/fund/base/quote/data/index/analysis/008975
 # param is fund code
-fund_trade_date = "https://danjuanapp.com/djapi/fund/order/v2/trade_date?fd_code=%s"
+fund_trade_date = "https://danjuanfunds.com/djapi/fund/order/v2/trade_date?fd_code=%s"
 # param is fund code
-fund_derived = "https://danjuanapp.com/djapi/fund/derived/%s"
+fund_derived = "https://danjuanfunds.com/djapi/fund/derived/%s"
+# Yield info: param is fund code
+fund_yield = "https://danjuanfunds.com/djapi/fundx/autoinvest/quote/yield/list?fd_code=%s"
+# Fund search: params are keyword and cookie
+fund_search = "https://danjuanfunds.com/djapi/v2/search?key=%s&xq_access_token=&source=index"
+# Fund does exist in watchlist: param is fund code
+fund_exist = "https://danjuanfunds.com/xqstock/v5/stock/portfolio/stock/hasexist.json?symbol=%s"
+# POST: Add to watchlist
+funds_add = "https://danjuanfunds.com/xqstock/v5/stock/portfolio/stock/add.json"
+# POST: Remove from watchlist
+funds_remove = "https://danjuanfunds.com/xqstock/v5/stock/portfolio/stock/cancel.json"
 
 # suggest
 suggest_stock = "https://xueqiu.com/query/v1/suggest_stock.json?q="
