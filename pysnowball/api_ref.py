@@ -6,6 +6,14 @@ finance_balance_url = "https://stock.xueqiu.com/v5/stock/finance/cn/balance.json
 finance_income_url = "https://stock.xueqiu.com/v5/stock/finance/cn/income.json?symbol="
 finance_business_url = "https://stock.xueqiu.com/v5/stock/finance/cn/business.json?symbol="
 
+
+# ?symbol=BABA&type=all&is_detail=true&count=5&timestamp=1719676800001
+# ?symbol=BABA&type=Q4&is_detail=false&count=5&timestamp=1719676800001
+finance_cash_flow_detail_url = "https://stock.xueqiu.com/v5/stock/finance/cn/cash_flow.json?symbol={}&type={}&is_detail={}&count={}"
+finance_indicator_detail_url = "https://stock.xueqiu.com/v5/stock/finance/cn/indicator.json?symbol={}&type={}&is_detail={}&count={}"
+finance_balance_detail_url = "https://stock.xueqiu.com/v5/stock/finance/cn/balance.json?symbol={}&type={}&is_detail={}&count={}"
+finance_income_detail_url = "https://stock.xueqiu.com/v5/stock/finance/cn/income.json?symbol={}&type={}&is_detail={}&count={}"
+
 # report
 report_latest_url = "https://stock.xueqiu.com/stock/report/latest.json?symbol="
 report_earningforecast_url = "https://stock.xueqiu.com/stock/report/earningforecast.json?symbol="

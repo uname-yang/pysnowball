@@ -5,7 +5,8 @@ name = "pysnowball"
 __author__ = 'Yang Yu'
 
 
-from pysnowball.finance import (cash_flow, indicator, balance, income, business)
+from pysnowball.finance import (cash_flow, indicator, balance, income, business,
+                                cash_flow_v2, indicator_v2, balance_v2, income_v2)
 
 from pysnowball.report import (report, earningforecast)
 
