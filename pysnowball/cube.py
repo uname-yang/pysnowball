@@ -20,3 +20,8 @@ def rebalancing_current(symbol):
 def quote_current(symbol):
     url = api_ref.quote_current + symbol
     return utls.fetch(url, host)
+
+def rank_list(category=14, page=1, size=20):
+    url = api_ref.rank_list.format(page, size)
+    url = url.replace("category=14", "category=" + str(category))
+    return utls.fetch(url, host)

@@ -2045,6 +2045,58 @@ ball.quote_current("ZH2567925")
 }
 ```
 
+### cube 组合排行榜
+
+获取组合排行榜数据
+
+```python
+import pysnowball as ball
+ball.rank_list()
+# or
+ball.rank_list(category=14, page=1, size=20)
+```
+
+输入参数：
+
+* category -> 分类ID，默认为14
+* page -> 页码，默认为1
+* size -> 每页数量，默认为20
+
+结果显示：
+
+```json
+{
+    "count": 20,
+    "filter": {
+        "category": 14
+    },
+    "page": 1,
+    "totalCount": 100,
+    "list": [
+        {
+            "id": 2987114,
+            "name": "规划",
+            "symbol": "ZH2953081",
+            "description": "",
+            "daily_gain": 1.16,
+            "monthly_gain": 2.26,
+            "total_gain": 300.98,
+            "net_value": 4.0098,
+            "annualized_gain_rate": 39.98,
+            "follower_count": 88,
+            "market": "cn",
+            "owner": {
+                "id": 9320507804,
+                "screen_name": "AlexMBH",
+                "profile_image_url": "community/20160/1453088918650-1453088918889.jpeg"
+            }
+        },
+        ...
+    ],
+    "maxPage": 5
+}
+```
+
 ### 可转债信息
 
 ```python
