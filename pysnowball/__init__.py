@@ -21,7 +21,7 @@ from pysnowball.f10 import(skholderchg, skholder, main_indicator,
 
 from pysnowball.token import (get_token,set_token)
 
-from pysnowball.user import(watch_list, watch_stock)
+from pysnowball.user import(watch_list, watch_stock, user_timeline, home_timeline, user_favorites)
 
 from pysnowball.cube import(nav_daily, rebalancing_history, rebalancing_current, quote_current)
 

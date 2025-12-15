@@ -1653,6 +1653,128 @@ ball.watch_stock(-1)
 }
 ```
 
+### user 用户动态
+
+获取指定用户的动态/文章
+
+```python
+import pysnowball as ball
+ball.user_timeline('1247347556')  # 获取全部动态
+ball.user_timeline('1247347556', type=0)  # 原发布
+ball.user_timeline('1247347556', type=2)  # 长文
+ball.user_timeline('1247347556', type=9)  # 热门
+```
+
+输入参数：
+
+* user_id -> 用户ID
+* page -> 页码，默认1
+* count -> 每页数量，默认20
+* type -> 类型过滤：None=全部, 0=原发布, 2=长文, 9=热门
+* source -> 买卖=交易tag的帖子
+
+结果显示：
+
+```json
+{
+    "total": 4,
+    "count": 2,
+    "statuses": [
+        {
+            "id": 366022098,
+            "user_id": 1247347556,
+            "source": "iPad",
+            "title": "",
+            "created_at": 1765769740000,
+            "retweet_count": 21,
+            "fav_count": 51,
+            "description": "...",
+            "user": {
+                "screen_name": "大道无形我有型",
+                ...
+            },
+            ...
+        }
+    ]
+}
+```
+
+### user 用户收藏
+
+获取指定用户的收藏文章
+
+```python
+import pysnowball as ball
+ball.user_favorites('1247347556')
+ball.user_favorites('1247347556', size=50)
+```
+
+输入参数：
+
+* user_id -> 用户ID
+* size -> 返回数量，默认20
+
+结果显示：
+
+```json
+{
+    "items": [
+        {
+            "id": 351044510,
+            "user_id": 8689584849,
+            "source": "iPhone",
+            "title": "",
+            "created_at": 1756998212000,
+            "retweet_count": 0,
+            "fav_count": 9,
+            "description": "...",
+            "user": {
+                "screen_name": "李妍",
+                ...
+            },
+            ...
+        }
+    ],
+    "next_id": -1,
+    "next_max_id": -1
+}
+```
+
+### user 关注动态
+
+获取当前登录用户关注的人发布的最新动态
+
+```python
+import pysnowball as ball
+ball.home_timeline()  # 默认参数
+ball.home_timeline(source="user", page=1, count=20)
+```
+
+输入参数：
+
+* source -> 来源类型，默认"user"
+* page -> 页码，默认1
+* count -> 每页数量，默认20
+
+结果显示：
+
+```json
+[
+    {
+        "id": 366038109,
+        "user_id": 5124430882,
+        "source": "雪球",
+        "description": "...",
+        "created_at": 1765776240000,
+        "user": {
+            "screen_name": "7X24快讯",
+            ...
+        },
+        ...
+    }
+]
+```
+
 ### cube 组合净值
 
 ```python
